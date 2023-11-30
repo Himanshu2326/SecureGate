@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* CSS Code */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, rgb(6 6 78), rgb(9 48 250)) no-repeat;
+    background-size: 100%;
+    height: 100vh !important;
+    height: fit-content;
+}
+
+.Main-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40rem;
+    color: white;
+    font-size: 5rem;
+}
+
+/*! Navbar */
+
+.Toggle-Bar{
+    color: white;
+    border: 1px solid red 20px 20px 2px;
+}
+
+#Link{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+#Link::before{
+  content: '' ;
+  position: absolute ;
+  left: 0 ;
+  bottom: 0 ;
+  width: 100% ;
+  height: 2px ;
+  background-color: rgb(244, 11, 58) ;
+  border-radius: 4px ;
+  scale: 0 1 ;
+  transform-origin: right ;
+  transition: scale 0.25s ;
+}
+#Link:hover::before{
+    scale: 1 ;
+    transform-origin: left ;
+}
+
+#SLink{
+    position: relative;
+    display: inline-block;
+}
+#SLink::before{
+  content: '' ;
+  position: absolute ;
+  left: 0 ;
+  bottom: 0 ;
+  width: 100% ;
+  height: 2px ;
+  background-color: rgb(244, 11, 58) ;
+  border-radius: 4px ;
+  scale: 0 1 ;
+  transform-origin: right ;
+  transition: scale 0.25s ;
+}
+#SLink:hover::before{
+    scale: 1 ;
+    transform-origin: left ;
+}
+
+.Navbar-Style {
+    color: white !important;
+}
+
+.navbar a {
+    background: transparent !important;
+    color: white !important;
+    margin: 0 5px;
+    font-size: 1.3rem;
+}
+
+/* ! Container */
+
+.Container{
+    margin: 4.45rem 0 !important;
+}
+
+.Cont {
+    /* background: linear-gradient(to right, rgb(10, 10, 240), rgb(8, 167, 230)); */
+    background: url('../Images/Rocket.jpg') no-repeat center center/cover;
+    height: 80vh;
+    width: 80%;
+    align-items: center;
+    display: flex;
+}
+
+.All-Cont {
+    background: radial-gradient(rgb(235, 234, 234), white);
+    width: 75%;
+    height: 92%;
+    margin: 2rem;
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ! Login */
+
+
+.Regis_Log_Btn {
+    border: 2px solid #0079ff;
+    border-radius: 20px;
+    padding: 7px 2px;
+    background: linear-gradient(to right, rgb(0, 55, 255), rgb(0 182 255));
+}
+
+.LoginBtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+}
+
+.Login-cont {
+    margin: 3rem
+}
+
+
+.LBtn a,
+.RBtn a {
+    color: white;
+}
+
+.LBtn {
+    padding: 3px 3px;
+    transform: .2s;
+}
+.RBtn {
+    padding: 4px 4px;
+    transform: .2s;
+
+}
+
+
+.LBtn a:active {
+    background: white;
+    color: rgb(34, 112, 255) !important;
+    border-radius: 20px;
+    padding: 6px 14px;
+    text-decoration: none;
+}
+
+
+.RBtn a:hover {
+    background: white;
+    color: rgb(34, 112, 255) !important;
+    border-radius: 20px;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+
+.Login-Text {
+    margin-bottom: 3rem;
+    font-size: 2.2rem !important;
+}
+
+.Image-Rocket {
+    animation: ani 2s linear infinite;
+    position: fixed;
+
+}
+
+.Image-Rocket img {
+    height: 70px;
+    transform: rotate(45deg);
+}
+
+@keyframes ani {
+    0% {
+        margin-top: -4rem;
+    }
+
+    50% {
+        margin-top: -5rem;
+    }
+
+    100% {
+        margin-top: -4rem;
+    }
+}
+@keyframes ani2 {
+    0% {
+        margin-top: -2rem;
+    }
+
+    50% {
+        margin-top: -3rem;
+    }
+
+    100% {
+        margin-top: -2rem;
+    }
+}
+
+.Cont-Area {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Text-Area {
+    flex-direction: column;
+    margin: 1rem 0;
+    text-shadow: white 2px 2px 20px;
+}
+
+.Text-Area h2 {
+    margin-top: 1.5rem;
+}
+
+.Text-Area p {
+    text-align: center;
+    width: 90%;
+    margin-bottom: 3.5rem;
+    text-shadow: white 2px 2px 20px;
+}
+
+.LBtn-2 a {
+    font-size: 1.3rem;
+    padding: 5px 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px white;
+}
+
+.LBtn-2:hover {
+    scale: 1.1 !important;
+    transition: .3s;
+
+}
+
+.LBtn-2 a:hover {
+    color: rgb(14, 118, 244) !important;
+    text-decoration: none !important;
+}
+
+/* ! Registration */
+
+.Regis-cont {
+    margin: 3rem;
+}
+
+.D1 {
+    margin-right: 2rem;
+}
+
+.Regis-Text {
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    font-size: 2rem !important;
+}
+
+
+/** Responsive Code  */
+
+@media screen and (max-width:1250px) {
+    .All-Cont {
+        width: 100%;
+        height: 85%;
+        margin: 1rem;
+    }
+
+}
+
+@media screen and (max-width:1250px) {
+    .Regis-Text {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        font-size: 1.8rem !important;
+    }
+
+}
+
+
+@media screen and (max-width:1050px) {
+    .All-Cont {
+        width: 100%;
+        height: 85%;
+        margin: 1rem;
+    }
+
+    .Regis-Text {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        font-size: 1.5rem !important;
+    }
+
+    .form-group {
+        margin-bottom: 0.2rem !important;
+    }
+
+    .Cont {
+        width: 95%;
+    }
+
+    .Login-Text {
+        margin-bottom: 3rem;
+        font-size: 2rem !important;
+    }
+
+}
+
+@media screen and (max-width:900px) {
+
+    .small,
+    small {
+        font-size: .675em !important;
+        font-weight: 400;
+    }
+
+    .form-control {
+        padding: 0.25rem 0.55rem !important;
+        font-size: 0.7rem !important;
+    }
+
+    label {
+        font-size: 0.8rem;
+    }
+
+    .h2,
+    h2 {
+        font-size: 1.7rem !important;
+    }
+
+    .Text-Area p {
+        font-size: 0.9rem;
+    }
+
+    .LBtn-2 a {
+        font-size: 1.1rem;
+        padding: 5px 18px;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    body{
+        height: fit-content;
+    }
+
+    .Cont {
+        height: fit-content;
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .Image-Rocket img {
+        height: 50px;
+    }
+
+    .All-Cont {
+        width: 95%;
+        margin: 2rem 1rem;
+    }
+
+    .Login-Text {
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem !important;
+    }
+
+    .Image-Rocket {
+        animation: ani 2s linear infinite;
+        z-index: -1;
+    }
+   
+
+}
+
+@media screen and (max-width:576px) {
+    .Cont {
+        margin: auto;
+    }
+
+    .Register-Area {
+        flex-direction: column;
+    }
+    .Regis_Log_Btn {
+        padding: 6px 1px;
+    }
+    .LBtn a:hover {
+        padding: 3px 9px;
+    }
+    .RBtn a:hover {
+        padding: 3px 9px;
+
+    }
+    .LBtn a , .RBtn a{
+        font-size: 0.8rem;
+    }
+    .Regis_Log_Btn {
+        padding: 2px 3px;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+    .Login-Text {
+        margin-bottom: 1.5rem;
+        font-size: 1rem !important;
+    }
+
+   
+
+}

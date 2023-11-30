@@ -1,0 +1,103 @@
+{{!-- Registration --}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    {{>links}}
+</head>
+
+<body>
+    {{>navbar}}
+    {{!- Container --}}
+    <div class="Container d-flex justify-content-sm-center mt-4">
+        <div class="Cont">
+
+            <div class="Cont-Area">
+                <div class="Image-Rocket">
+                    <img src="Images/space.png" alt="">
+                </div>
+                <div class="Text-Area d-flex align-items-center">
+                    <h2>Welcome</h2>
+                    <p>To The Complete Login And Registration Form</p>
+                    <div class="LBtn-2"><a href="/login">Login</a></div>
+                </div>
+            </div>
+
+            <div class="All-Cont ml-auto">
+                {{!-- <div class="LoginBtn d-flex justify-content-end mb-5">
+                    <div class="Regis_Log_Btn">
+                        <span class="LBtn"><a href="/login">Login</a></span>
+                        <span class="RBtn"> <a href="/registration">Registration</a></span>
+                    </div>
+                </div> --}}
+                <div class="Regis-cont">
+
+
+                    <h2 class="Regis-Text">Register Below! </h2>
+
+                    <form action="/registration" method="POST">
+                        <div class=" d-flex Register-Area ">
+
+                            <div class="D1"> {{!-- Div1 --}}
+                                <div class="form-group">
+                                    <label for="firstname">First Name</label>
+                                    <input type="text" class="form-control" required="true" id="firstname" placeholder="First Name"
+                                        name="firstname">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastname">Last Name</label>
+                                    <input type="text" class="form-control" required="true" id="lastname" placeholder="Last Name"
+                                        name="lastname">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email address</label>
+                                    <input type="email" class="form-control" required="true" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="Enter email" name="email">
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                        anyone
+                                        else.</small>
+                                </div>
+
+                                <div class="form-group">
+                                </div>
+                                <label for="phonenumber">Phone Number</label>
+                                <input type="number" class="form-control" required="true" id="phonenumber" placeholder="Number"
+                                    name="phone">
+                            </div> {{! End Div1}}
+
+                            <div> {{! Div2 }}
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" required="true" id="password" placeholder="Password"
+                                        name="password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Confirm Password</label>
+                                    <input type="password" class="form-control" required="true" id="exampleInputPassword1"
+                                        placeholder="Confirm Password" name="confirmpassword" onchange = CheckPassWord()>
+                                </div>
+
+                                <label class="radio inline">
+                                    <input type="radio" name="gender" value="male" checked>
+                                    <span>Male</span>
+                                </label>
+                                <label class="radio inline">
+                                    <input type="radio" name="gender" value="female" checked>
+                                    <span>Female</span>
+                                </label>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div> {{! Div2 Ends}}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+</html>

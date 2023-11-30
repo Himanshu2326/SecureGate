@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Home</title>
+    {{>links}}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-size: 100%;
+            height: 100vh;
+            width: 100%;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, rgb(6 6 78), rgb(9 48 250)) no-repeat;
+
+        }
+
+        .welcome-container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .animated-text {
+            font-size: 3em;
+            color: #fff;
+            margin: 10px 0;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .sub-text {
+            color: #d4d4d4;
+        }
+
+        .explore-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #3498db;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .explore-button:hover {
+            background-color: white;
+            color: rgb(50, 50, 243);
+            text-decoration: none;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: black;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+    </style>
+</head>
+
+<body>
+    {{!--? NavBar --}}
+    <nav class="navbar navbar-expand-lg Navbar-Style mt-3 mx-5">
+        <a class="navbar-brand" href="/">RoKiT</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fa fa-bars Toggle-Bar"></i></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+
+                {{!-- <li class="nav-item">
+                    <a class="nav-link" id="SLink" href="/secret">Secret</a>
+                </li>
+                <li class="nav-item"> --}}
+                    <a class="nav-link" id="Link" >Log-Out</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    {{!--? Main --}}
+
+    <div class="welcome-container">
+        <h1 class="animated-text">Welcome</h1>
+        <p class="sub-text">We're thrilled to have you back.</p>
+        {{!-- <a href="#explore" class="explore-button">Explore</a> --}}
+    </div>
+
+
+
+    {{!--? LogOut PopUp --}}
+
+    <div id="logoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Are you sure you want to log out?</p>
+            <a href="/login">Logout</a>
+        </div>
+    </div>
+
+
+    <script>
+
+       
+
+        var modal = document.getElementById("logoutModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("Link");
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        };
+
+        // When the user clicks on <span> (x), close the modal
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+</body>
+
+</html>
