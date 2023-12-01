@@ -24,27 +24,19 @@
             </div>
 
             <div class="All-Cont ml-auto">
-                    {{!-- <div class="LoginBtn d-flex justify-content-end mb-5">
-                        <div class="Regis_Log_Btn">
-                            <span class="LBtn"><a href="/login">Login</a></span>
-                            <span class="RBtn"><a href="/registration">Registration</a></span>
-                        </div>
-                    </div> --}}
                 <div class="Login-cont">
-
-
                     <div class="Login">
                         <h2 class="Login-Text">Enter Your Login Details Below</h2>
                         <form action="/login" method="POST">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email address</label>
                                 <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" placeholder="Enter email" name="email" required>
+                                    aria-describedby="emailHelp" placeholder="Enter email" autocomplete="off" name="email" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password" placeholder="Password"
+                                <input type="password" class="form-control" id="password" autocomplete="off" placeholder="Password"
                                     name="password" required>
                             </div>
 
