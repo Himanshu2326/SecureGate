@@ -1,6 +1,6 @@
 
-# RoKit 
-RoKit a complete Login and Registration Form Made using HTML, CSS, JS, NodeJs with MongoDB DataBase Connectivity.
+# SecureGate 
+SecureGate a complete Login and Registration Form Made using HTML, CSS, JS, NodeJs with MongoDB DataBase Connectivity.
 
 
 ## Hoisted Link
