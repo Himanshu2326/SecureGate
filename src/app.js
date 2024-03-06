@@ -105,7 +105,7 @@ app.post('/login', async (req, res) => {
         const EnterEmail = req.body.email;
         const EnterPassword = req.body.password;
 
-        const UserEmail = await Registration.findOne({ email: EnterEmail });
+        const UserData = await Registration.findOne({ email: EnterEmail });
         
          if (!UserData) {
             res.status(400).render("Invalid");
